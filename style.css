@@ -41,6 +41,24 @@ h1, h2, h3 {
     padding-bottom: 1em;
 }
 
+button {
+    border-radius: 20px;
+    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    margin-top: 20px;
+    border: 0;
+    transition: all 0.4s;
+    font-family: 'Montserrat';
+    float: right;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+
 .gridContainer {
     display: grid;
     grid-template: repeat(2, auto)/ repeat(2, auto);
@@ -59,18 +77,24 @@ h1, h2, h3 {
 .gridItem:hover{
     box-shadow: 10px 15px;
 }
-.buttons {
-    grid-column: 1 / -1;
-    text-align: right;
+.TopButtons {
+    grid-column: 1.5/-1;
+}
+.logo {
+    width: 30%;
+    float: left;
 }
 .Name {
+    font-size: 3em;
+    padding:10px;
+    margin: 10px;
+}
+.About {
     /*you can use grid-row: span 3 if you want it to take a certain # of rows*/
     grid-column: 1 / -1;
     grid-row: span 20;
     background-color: rgb(154, 164, 173);
     border-radius: 25px;
-}
-.About {
     text-align: center;
 }
 
