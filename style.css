@@ -6,7 +6,7 @@ body {
     font-size: 12px;
     max-width: 1200px;
     margin: auto;
-    background-color: rgb(91, 99, 116);
+    background-color: #1A1A1D;
 }
 h1 {
     font-size: 3em;
@@ -18,7 +18,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.em;
+}
+
+hr{
+    margin-top: 20px;;
 }
 
 header {
@@ -27,18 +31,22 @@ header {
 
 p {
     margin: .2em auto;
+    font-size: 1.2em;
+    color: white;
 }
 
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
+a{
+    color: #72d6d0;
+    text-decoration: none;
 }
+
 
 h1, h2, h3 {
     font-weight: 100;
     margin-bottom: 0;
     padding-bottom: 1em;
+    color: #66FcF1;
+    font-weight: bold;
 }
 
 button {
@@ -61,7 +69,7 @@ button:hover{
 
 .gridContainer {
     display: grid;
-    grid-template: repeat(2, auto)/ repeat(2, auto);
+    grid-template: repeat(2, auto)/ repeat(3, auto);
     grid-gap: 20px;
     padding: 20px;
     justify-content: center;
@@ -69,20 +77,35 @@ button:hover{
 
 .gridItem {
     border-radius: 25px;
-    background-color: rgb(154, 164, 173);
+    background-color: #4E4E50;
     padding: 10px;
     box-shadow: 5px 10px;
 }
 
-.gridItem:hover{
-    box-shadow: 10px 15px;
+.gridItemWide {
+    border-radius: 25px;
+    background-color: #4E4E50;
+    padding: 15px;
+    box-shadow: 5px 10px;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr ;
 }
+
+/*------------------------top row------------------------*/
 .TopButtons {
-    grid-column: 1.5/-1;
+    grid-column: 2/-1;
+}
+.Name {
+    font-size: 3em;
+    padding:10px;
+    margin: 10px;
+    color: white;
 }
 /*------------------------images------------------------*/
 .logo {
-    width: 30%;
+    width: 20%;
     float: left;
 }
 .profile{
@@ -93,7 +116,13 @@ button:hover{
 /*--------------------About------------------------------*/
 .imageContainer{
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    
+}
+.pictureLink{
+    width: 75%;
+    position: relative;
     height: 100%;
 }
 .overlay {
@@ -118,17 +147,13 @@ button:hover{
     overflow: hidden;
     font-size: 24px;
     transition: 0.5s ease;
+    
 }
-.imageContainer:hover .overlay{
+.pictureLink:hover .overlay{
     width: 100%;
+    background-color: #45A29E
 }
 
-  
-.Name {
-    font-size: 3em;
-    padding:10px;
-    margin: 10px;
-}
 .About {
     /*you can use grid-row: span 3 if you want it to take a certain # of rows*/
     grid-column: 1 / -1;
@@ -137,21 +162,59 @@ button:hover{
     border-radius: 25px;
     display: grid;
     grid-template-columns: 0.4fr 1fr;
-    grid-template-rows: 0.2 1fr ;
+    grid-template-rows: 0fr 1fr ;
     padding: 20px;
     padding-right: 70px;
+    
 }
-.AboutMe{
-    grid-column: 1 / -1;
+.title{
+    grid-column: 2 / -1;
     font-size: 2em;
+    color: #66FcF1
 }
 .AboutText{
+    margin-top: 40px;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: large;
-    padding: 10px;
+    font-size: large;  
 }
 
 .quote{
     margin-top: 60px;
 }
+/*------------------Education--------------------------*/
+
+.Education{
+    background-color: #4E4E50;
+    border-radius: 25px;
+    padding: 20px;
+    grid-column: 1/3;
+}
+
+/*----------------------Skills------------------------------*/
+
+.Skills{
+    background-color: #4E4E50;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.progress-bar{
+    background-color: #66FcF1;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.grey-bubble{
+    background-color: rgb(154, 164, 173);
+    border-radius: 15px;
+    width: 20%;
+    padding: 7px;
+    margin: 3px;
+    text-align: center;
+    float: left
+}
+
+/*-------------------------Projects--------------------------------*/
 
